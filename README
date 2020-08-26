@@ -1,0 +1,20 @@
+SIMPLE PRICE WATCH APPLICATION(in progress)
+Building a simple price watch application using:
+    - Scrapy to scrape product data from Amazon, E-Bay and Wallmart
+    - ELK stack to ingest and analyze data collected
+    - Django(maybe Flask) to build out front end and connect to Elasticsearch cluster 
+
+Scrapers located in scrapy_scrapers/scrapers/
+    - Spider for Amazon Items
+    - Spider for Amazon Item Reviews (needs to be refactored to read from csv file produced by Amaon Items Spider)
+
+Logstash config file in logstash/
+    - used to ingest item review data into Elasticsearch
+    STEPS TO RUN
+    : have a working elasticsearch cluster on the url specified in the config file
+    : have a working logstash instance
+    : >> ./logstash-7.8.0/bin/logstash -f logconfig/reviews.conf
+
+Client (IN PROGRESS)
+: 
+
