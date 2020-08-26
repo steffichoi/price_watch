@@ -5,7 +5,7 @@ class AmazonItemsSpider(scrapy.Spider):
     name = 'AmazonItemsSpider'
     allowed_domains = ['amazon.ca']
     start_urls = [
-        "https://www.amazon.ca/s?k=weights&ref=nb_sb_noss_2"
+        "https://www.amazon.ca/s?k=weights&rh=n%3A2406112011&ref=nb_sb_noss"
         ]
 
     def parse(self, response):
