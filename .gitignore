@@ -1,0 +1,8 @@
+venv/
+
+*.pyc
+scrapy_scrapers/scrapers/scrapers/__pycache__/
+
+instance/
+
+
