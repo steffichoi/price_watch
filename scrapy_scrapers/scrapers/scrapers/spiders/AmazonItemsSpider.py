@@ -1,5 +1,5 @@
 import scrapy
-from ..items import AmazonMainPageItem
+from ..items import MainPageItem
 
 class AmazonItemsSpider(scrapy.Spider):
     name = 'AmazonItemsSpider'
@@ -13,7 +13,7 @@ class AmazonItemsSpider(scrapy.Spider):
         mainpage = response.xpath("//*[@class='s-expand-height s-include-content-margin s-border-bottom s-latency-cf-section']")
 
         for item in mainpage:
-            itm = AmazonMainPageItem()
+            itm = MainPageItem()
 
             itm_title = item.xpath('.//h2[@class="a-size-mini a-spacing-none a-color-base s-line-clamp-4"]/a/span/text()').extract_first()
             itm_link = item.xpath('.//h2[@class="a-size-mini a-spacing-none a-color-base s-line-clamp-4"]/a/@href').extract_first()

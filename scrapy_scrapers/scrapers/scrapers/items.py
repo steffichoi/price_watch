@@ -5,7 +5,7 @@
 
 import scrapy
 
-class AmazonMainPageItem(scrapy.Item):
+class MainPageItem(scrapy.Item):
     item_name = scrapy.Field()
     item_link = scrapy.Field()
     item_price = scrapy.Field()
