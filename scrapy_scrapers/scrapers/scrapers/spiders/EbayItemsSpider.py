@@ -20,8 +20,12 @@ class EbayItemsSpider(scrapy.Spider):
             itm_wholeprice = item.xpath('.//div[@class="s-item__info clearfix"]/div[@class="s-item__details clearfix"]/div[@class="s-item__detail s-item__detail--primary"]/span[@class="s-item__price"]/span/text()').extract_first()
 
             if itm_title and itm_link:
-                itm['item_name'] = ''.join(itm_title).strip()
-                itm['item_link'] = ''.join(itm_link).strip()
+                itm_title = itm_title.strip()
+                if itm_title[0] and itm_title[-1] != '\"':
+                    itm_title = '\"' + itm_title + '\"'
+                
+                itm['item_name'] = itm_title
+                itm['item_link'] = itm_link.strip()
                 if itm_wholeprice:
-                    itm['item_price'] = ''.join(itm_wholeprice).strip()
+                    itm['item_price'] = itm_wholeprice.strip()
                 yield itm
