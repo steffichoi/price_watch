@@ -1,6 +1,6 @@
 SIMPLE PRICE WATCH APPLICATION(in progress)
 Building a simple price watch application using:
-    - Scrapy to scrape product data from Amazon, E-Bay and Wallmart
+    - Scrapy to scrape product data from Amazon, E-Bay and SportChek
     - ELK stack to ingest and analyze data collected
     - Django(maybe Flask) to build out front end and connect to Elasticsearch cluster 
 
