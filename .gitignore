@@ -1,8 +1,9 @@
 venv/
 
 *.pyc
-scrapy_scrapers/scrapers/scrapers/__pycache__/
+__pycache__/
 
 instance/
 
+db.sqlite3
 
